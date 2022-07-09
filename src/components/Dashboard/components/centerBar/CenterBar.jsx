@@ -6,8 +6,16 @@ import './styles.scss'
 import Tab from '../Tab/Tab';
 const CenterBar = ({tabs, setTabs, activetext, setActivetext}) => {
   
-  const onClose = (id)=>{
-    setTabs(tabs.filter(el=> el.id!==id))
+  const onClose = (id, i)=>{
+    const tabsRe = tabs;
+    if(tabsRe[i].active===true && tabsRe.length>1 && i!==0){
+      setActivetext(tabsRe[i-1].text)
+      tabsRe[i-1].active=true
+    }else if(tabsRe[i].active===true && i===0 && tabsRe.length>1){
+      setActivetext(tabsRe[i+1].text)
+      tabsRe[i+1].active=true
+    }
+    setTabs(tabsRe.filter(el=> el.id!==id))
   }
 
   const handleClick = (id)=>{
@@ -33,8 +41,8 @@ const CenterBar = ({tabs, setTabs, activetext, setActivetext}) => {
         </div>
       </div>
       <div className='tabscontainer'> 
-        {tabs.map(el=> {
-          return  <Tab click={()=>handleClick(el.id)} close={()=>onClose(el.id)} key={el.id} text={el.text} tabw={tabs.length===4?'25%':'33%'} bg={el.active?'#08464b':'#6F8C94'}/>
+        {tabs.map((el,i)=> {
+          return  <Tab click={()=>handleClick(el.id)} close={()=>onClose(el.id, i)} key={el.id} text={el.text} tabw={tabs.length===4?'25%':'33%'} bg={el.active?'#08464b':'#6F8C94'}/>
         })}
       </div>
       <div className="mainarea">
