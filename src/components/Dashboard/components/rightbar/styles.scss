@@ -1,0 +1,96 @@
+﻿$rightbar-color1: #FFFFFF;
+$font-family_1: 'Work Sans';
+
+.rightbar {
+	width: 25vw;
+	border-left: solid 0.5px #E4E5E9;
+	.rightbarhead {
+		padding: 2rem 3rem;
+		display: flex;
+		justify-content: space-between;
+		border-bottom: solid 1px #E4E5E9;
+		.rightheadbtn {
+			display: flex;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 10px 24px;
+			gap: 6px;
+			background: #41BCC3;
+			border-radius: 8px;
+			border: none;
+			p {
+				font-family: $font-family_1;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 14px;
+				line-height: 20px;
+				display: flex;
+				align-items: center;
+				letter-spacing: 0.85px;
+				color: $rightbar-color1;
+			}
+		}
+	}
+	.firstsec {
+		height: 5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: solid 1px #E4E5E9;
+		.firstsecbox {
+			height: 3.5rem;
+			display: flex;
+			align-items: center;
+			padding: 0 1rem;
+			border-radius: 10px;
+			width: 97%;
+			border: solid 1px #E4E5E9;
+			.firstsecbtns {
+				display: flex;
+				gap: 1rem;
+				.firstsecbtn {
+					gap: 8px;
+					width: 97px;
+					height: 24px;
+					border-radius: 8px;
+					font-family: $font-family_1;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 19px;
+					border: none;
+				}
+				.firstsecbtnactive {
+					gap: 8px;
+					width: 97px;
+					height: 24px;
+					border-radius: 8px;
+					font-family: $font-family_1;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 14px;
+					line-height: 19px;
+					border: none;
+					color: $rightbar-color1;
+					background: #08464B;
+				}
+			}
+		}
+	}
+	.secondsec {
+		height: calc(100% - 60px - 10rem);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $font-family_1;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 35px;
+		line-height: 19px;
+		p {
+			height: 3rem;
+		}
+	}
+}

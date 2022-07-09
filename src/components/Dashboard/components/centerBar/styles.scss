@@ -1,0 +1,106 @@
+﻿$centerbar-color1: #08464B;
+$centerbar-color2: #E4E5E9;
+$centerbar-color3: #000000;
+$centerbar-fontfamily: 'Work Sans';
+$centerbar-background: Transparent;
+
+.centerbar {
+	width: 50vw;
+	.centerbarnav {
+		display: flex;
+		justify-content: space-between;
+		padding: 1.5rem 4rem 0rem 2rem;
+		p {
+			font-family: $centerbar-fontfamily;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 18px;
+			line-height: 21px;
+			color: $centerbar-color1;
+		}
+		.navicons {
+			display: flex;
+			gap: 2rem;
+			background: #FFFFFF;
+			border: 1px solid #F2F2F2;
+			padding: 12px;
+			border-radius: 10px;
+		}
+	}
+	.tabscontainer {
+		display: flex;
+		justify-content: flex-start;
+		padding: 1rem 4rem 2rem 2rem;
+		gap: 0.5rem;
+		.tab {
+			height: 32px;
+			border-radius: 4px;
+			font-family: $centerbar-fontfamily;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 0 12px;
+			color: $centerbar-color2;
+			p {
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 16px;
+				width: 12rem;
+				height: 1.5rem;
+				cursor: pointer;
+			}
+			button {
+				background-color: $centerbar-background;
+				background-repeat: no-repeat;
+				border: none;
+				cursor: pointer;
+			}
+		}
+	}
+	.mainarea {
+		height: calc(100% - 60px - 8rem);
+		.emptyarea {
+			height: calc(100% - 60px - 8rem);
+			align-items: center;
+			display: flex;
+			flex-direction: column;
+			width: 50vw;
+			justify-content: center;
+			.emptyareatext {
+				margin-top: 2rem;
+				.emptyhead1 {
+					font-family: $centerbar-fontfamily;
+					font-style: normal;
+					font-weight: 600;
+					font-size: 20px;
+					line-height: 23px;
+					text-align: center;
+					color: $centerbar-color3;
+				}
+				.emptyhead2 {
+					font-family: $centerbar-fontfamily;
+					font-style: normal;
+					font-weight: 400;
+					font-size: 14px;
+					line-height: 16px;
+					text-align: center;
+					color: $centerbar-color3;
+				}
+			}
+		}
+		.filledarea {
+			font-family: $centerbar-fontfamily;
+			height: calc(100% - 60px - 8rem);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 30px;
+			line-height: 16px;
+			text-align: center;
+			color: $centerbar-color3;
+		}
+	}
+}
